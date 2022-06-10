@@ -1,2 +1,5 @@
+transformers
 pytest
 pylint
+click
+streamlit
