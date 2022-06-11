@@ -20,7 +20,7 @@ def mask(sentence):
     j = 1
     for a2 in answers2:
         click.echo(click.style((f"Prediction {j}:",
-                        list(a2.values())[3], "Score:", str(list(a2.values())[0])), fg="green"))
+                        list(a2.values())[0], "Score:", str(list(a2.values())[1])), fg="green"))
         j = j+1    
 
 if __name__ == "__main__":

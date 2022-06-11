@@ -3,3 +3,5 @@ pytest
 pylint
 click
 streamlit
+torch
+torchvision==0.12.0
