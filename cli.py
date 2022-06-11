@@ -2,7 +2,6 @@ import click
 from main import final_model
 
 
-
 @click.command()
 @click.option(
     "--sentence",
@@ -10,7 +9,7 @@ from main import final_model
     help="Takes a sentence with <mask> in place of any word and predicts that word!",
 )
 
-
+# the function for the CLI tool
 
 def mask(sentence):
     """Example: Machine learning is an application of <mask>."""
