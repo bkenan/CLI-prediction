@@ -24,9 +24,12 @@ python3 cli.py
 
 ## Running for UI:
 
+```
 make install
+```
+```
 streamlit run main.py
-
+```
 
 ## Demo
 
