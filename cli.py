@@ -1,5 +1,7 @@
 import click 
-from main import *
+from main import final_model
+
+
 
 @click.command()
 @click.option(
@@ -13,12 +15,12 @@ from main import *
 def mask(sentence):
     """Example: Machine learning is an application of <mask>."""
         
-    answers2 = model(sentence)
+    answers2 = final_model(sentence)
     
     j = 1
     for a2 in answers2:
         click.echo(click.style((f"Prediction {j}:",
-                        a2["sequence"], "Score:", str(round(a2["score"], 2))), fg="green"))
+                        list(a2.values())[3], "Score:", str(list(a2.values())[0])), fg="green"))
         j = j+1    
 
 if __name__ == "__main__":

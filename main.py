@@ -15,23 +15,23 @@ def load_model():
 
 
 model_load_state = st.text('Loading Model...')
-model = load_model()
+final_model = load_model()
 
 model_load_state.text('Model is ready!')
 
 
 st.write("##  Your Sentence:")
-input = st.text_input(" ")
+user_input = st.text_input(" ")
 
 
 button = st.button("Predict")
-if button and not input:
+if button and not user_input:
     st.warning("No sentence was provided!")
 
 
 with st.spinner("Finding suitable Words"):
-    if button and input:
-        answers = model(input)
+    if button and user_input:
+        answers = final_model(user_input)
         i = 1
         for a in answers:
             st.write(f"Prediction {i}:",
